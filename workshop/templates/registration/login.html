@@ -1,0 +1,34 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>kafkl</title>
+
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+</head>
+<body>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-2 sidebar">
+        </div>
+        <div class="col-lg-10 col-lg-offset-2 col-md-10 col-md-offset-2 col-sm-10 col-sm-offset-2 content">
+          <form  method="post">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit" class="btn btn-pink pull-right">Sign In</button>
+          </form>
+          <a href="{% url 'log' %}">Become a Restaurant</a>
+
+        </div>
+      </div>
+    </div>
+
+</body>
+</html>

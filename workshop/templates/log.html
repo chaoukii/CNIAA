@@ -1,0 +1,48 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>login</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'stylelog.css' %}">
+    </head>
+    <body>
+
+
+      <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+                <form method="POST" id="signUp" class="inputLogin">
+                  {% csrf_token %}
+                  {{ user_form }}
+                  <button type="submit" class="subButton">Sign Up</button>
+
+                </form>
+                <a href="{% url 'login' %}">Already have an account ?</a>
+
+
+<script>
+        var x = document.getElementById("signIn");
+        var y = document.getElementById("signUp");
+        var z = document.getElementById("btns");
+        function signUp(){
+            x.style.left = "-450px"
+            y.style.left = "25px"
+            z.style.left = "115px"
+
+        }
+        var x = document.getElementById("signIn");
+        var y = document.getElementById("signUp");
+        var z = document.getElementById("btns");
+        function signIn(){
+            x.style.left = "25px"
+            y.style.left = "450px"
+            z.style.left = "0px"
+
+        }
+
+
+</script>
+
+
+    </body>
+</html>
