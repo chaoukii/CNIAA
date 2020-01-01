@@ -121,13 +121,8 @@ STATICFILES_DIRS = [
 
 import dj_database_url
 db_from_env = dj_database_url.config()
-SECRET_KEY = config('SECRET_KEY')
-DEBUG = config('DEBUG', default=False, cast=bool)
-DATABASES = {
-    'default': dj_database_url.config(
-        default=config('DATABASE_URL')
-    )
-}
+DATABASES['default'].update(db_from_env)
+    
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
