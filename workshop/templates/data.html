@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom " >
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#coll" aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index2.html">TECH DAY</a>
+            </div>
+
+            <div class="collapse navbar-collapse " id="coll">
+
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="effect"><a href="{% url 'home' %}">Home</a></li>
+                    <li class="effect"><a href="#program">Program</a></li>
+                    <li class="effect"><a href="{% url 'contact' %}">Contact Us</a></li>
+                    <li class="effect"><a href="{% url 'login' %}">Sign In</a></li>
+                    <li class="effectSignIn"><a class="effectSignIn" href="{% url 'log' %}" >Sign Up</a></li>
+
+
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    DATA
+
+  </body>
+</html>

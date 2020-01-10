@@ -1,3 +1,26 @@
-<h1>{{ user.username }}</h1>
-<br>
-<a href="{% url 'logout' %}">Fuck off</a>
+{% load staticfiles %}
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>login</title>
+        <link rel="stylesheet" href="{% static 'Lstyle.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+
+    </head>
+    <body>
+      <h1>Wellcome {{ user.username }}</h1>
+        <div class="pere">
+            <div class="box">
+
+                <br>
+                  <a href="{% url 'logout' %}">Fuck off</a>
+                  <a href="{% url 'submit' %}">Submit</a>
+            </div>
+        </div>
+
+
+
+    </body>
+</html>

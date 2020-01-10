@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+   /* font-family: lorem ipsum sans serif;*/
+    font-size: 16px;
+
+}
+/************  body  **************/ 
+.pere{
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    background: linear-gradient(120deg,rgba(0, 0, 0, 0.226),rgba(255, 255, 255, 0.281));  
+
+}
+/************  form box   ****************/
+.box{
+    box-shadow: 0 0 20px 9px rgb(86, 162, 192);
+    width: 330px;
+    height: 540px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0% auto;
+    background: #b7dce0a9;
+    padding: 5px;
+    border-radius: 22px;
+
+  }
+
+/************   button   ****************/
+
+.btnBorder{
+    width: 170px;
+    margin: 60px auto;
+    box-shadow: 0 0 20px 9px skyblue;
+    border-radius: 0px;
+    text-align: center;
+    cursor: pointer;
+
+    background: linear-gradient(to left,rgba(161, 161, 161, 0.901),rgb(28, 124, 161));
+}
+.btn{    cursor: pointer;
+
+    padding: 12px 30px ;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+/************ input design  ****************/
+.inputL{
+    top: 20px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+
+#signIn{
+    left: 25px;
+}
+
+  /******* start input  ***********/
+  .inputAll{
+    border-bottom: 2px solid #adadad;
+    position: relative;
+    margin: 30px 0;
+  }
+  
+  .inputAll input{
+    font-size: 18px;
+    color: #333;
+    border: none;
+    width: 100%;
+    outline: none;
+    background: none;
+    padding: 0 5px;
+    height: 40px;
+  }
+  
+  .inputAll span::before{
+    
+    content: attr(data-placeholder);
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    color: rgb(37, 37, 37);
+    transform: translateY(-50%);
+    z-index: -1;
+    transition: .5s;
+
+  }
+  
+  .inputAll span::after{
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 2px;
+    background: linear-gradient(120deg,blue,skyblue);
+    transition: .5s;
+  }
+  
+  .focus + span::before{
+    top: -5px;
+    font-size: 13px;
+
+  }
+  .focus + span::after{
+
+    width: 100%;
+  }
+/**********   fin  input **************/
+/**********    new account  ***********/
+  .newAccount{ 
+    transform: translate(0,-100%);
+    text-decoration: none;
+  }
+
+/**********  image   *********************/
+.imgcontainer {
+  text-align: center;
+  margin: 0px 30px 35px 0;
+  
+}
+img.image {
+  width: 60%;
+  border-radius: 50%;
+}
+/************ fin image   ************/ 
+

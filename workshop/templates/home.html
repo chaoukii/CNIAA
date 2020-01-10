@@ -1,4 +1,6 @@
 {% load staticfiles %}
+{% load bootstrap4 %}
+{% load i18n %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,8 +13,8 @@
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
         <link href="https://fonts.googleapis.com/css?family=Courier+Prime&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=B612&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/font-awesome.css">
-        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
+        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap0.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'Bost2.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'css2.css' %}">
@@ -44,11 +46,11 @@
 
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="effect"><a href="#home">Home</a></li>
-                        <li class="effect"><a href="#program">Program</a></li>
-                        <li class="effect"><a href="#contact">Contact Us</a></li>
-                        <li class="effect"><a href="#about">About Us</a></li>
-                        <li class="effectSignIn"><a class="effectSignIn" href="{% url 'log' %}" >Sign In</a></li>
+                        <li class="effect"><a href="{% url 'home' %}">Home</a></li>
+                        <li class="effect"><a href="{% url 'program' %}">Program</a></li>
+                        <li class="effect"><a href="{% url 'contact' %}">Contact Us</a></li>
+                        <li class="effect"><a href="{% url 'login' %}">Sign In</a></li>
+                        <li class="effectSignIn"><a class="effectSignIn" href="{% url 'log' %}" >Sign Up</a></li>
 
 
 
@@ -75,7 +77,7 @@
 
                 <div class="col-md-6 col-sm-12 ">
                     <div class="fromRight">
-                      <img class="image" src="g/homeg.png">
+                      <img class="image" src="{% static 'homeg.png' %}">
                     </div>
                   </div>
               </div>
@@ -97,7 +99,7 @@
     <div class="container text-center">
 
         <div class="row allCenter text-md-left ">
-            <div class="col-md-6 order-1 order-md-0 fromLeft"><img class="image" src="g/g1.png" alt=""></div>
+            <div class="col-md-6 order-1 order-md-0 fromLeft"><img class="image" src="{% static 'g1.png' %}" alt=""></div>
             <div class="col-md-6  ">
                 <p class="padding-paragraph fromRight ">Using our Piper Assistant application, you can move your data to be stored our decentralized Using our Piper Assistant application, you can move your data to be stored our decentralized network with simple drag &amp; drop.</p>
             </div>
@@ -109,7 +111,7 @@
             </div>
         </div>
         <div class="row allCenter text-md-left ">
-            <div class="col-md-6 order-1 order-md-0 from3D-11"><img class="image" src="g/g3.png" alt=""></div>
+            <div class="col-md-6 order-1 order-md-0 from3D-11"><img class="image" src="{% static 'g3.png' %}" alt=""></div>
             <div class="col-md-6 ">
                 <p class="padding-paragraph from3D-12">As with all innovative Using our Piper Assistant application, you can move your data to be stored our decentralized technologies, sometimes unpredictable things will happen, and you can always count on our support to solve issues for you.</p>
             </div>
@@ -117,7 +119,7 @@
 
         <div class="ff">
             <div class="row allCenter text-md-right ">
-                <div class="col-md-6 order-1 from3D-21"><img class="image" src="g/g2.png" alt=""></div>
+                <div class="col-md-6 order-1 from3D-21"><img class="image" src="{% static 'g2.png' %}" alt=""></div>
                 <div class="col-md-6 order-0">
                     <p class="padding-paragraph from3D-22">We want to make Using our Piper Assistant application, you can move your data to be stored our decentralized sure that you can keep using the software that you use to manage your  business.</p>
                 </div>
@@ -140,7 +142,7 @@
                       <div class="send" >What Do You Think About This Event</div>
                   </div>
                 {% csrf_token %}
-                {{ form }}
+                {% bootstrap_form form %}
                 <button type="submit" class="btnSend">Creat</button>
               </form>
             </div>
@@ -170,7 +172,7 @@
         <h1>Who We Are</h1>
         <h3> we are club scientifique traying to help the engenieer in the technology and we want to give them our experiense </h3>
         <div class="orgenazers">If You Want To Descover Our Orgenaizers <a href="#oragan.html"> click here</a> </div>
-
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.729639869554!2d3.1717269156421697!3d36.70503418074978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128e522f3f317461%3A0x215c157a5406653c!2sEcole%20Nationale%20Sup%C3%A9rieure%20d&#39;Informatique%20(Higher%20School%20for%20Computer%20Science)!5e0!3m2!1sen!2sdz!4v1578677523387!5m2!1sen!2sdz" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
     </center>
 
 
@@ -183,8 +185,9 @@
 
 
 
-                    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-                    <script type="text/javascript" src="js/bootstrap.js"></script>
+
+                    <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+                    <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
 
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
 

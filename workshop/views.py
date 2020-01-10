@@ -1,9 +1,13 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect, HttpResponse
 
-from workshop.models import Comment
-from workshop.forms import CommentForm, UserForm
+from workshop.models import Comment, Speciality
+from workshop.forms import CommentForm, UserForm, SubmitForm
 from django.contrib.auth.models import User
+from .models import Submit
+
 
 # Create your views here.
 def home(request):
@@ -29,13 +33,38 @@ def log(request):
                  username = user_form.cleaned_data["username"],
                  password = user_form.cleaned_data["password"]
             ))
+            return redirect(contact)
 
     return render(request, 'log.html',{
         "user_form": user_form,
     })
 
-def account(request):
-    return redirect(account_home)
-
+@login_required(login_url='/login/')
 def account_home(request):
     return render(request, 'account/home.html', {})
+
+def data(request):
+    specialities = ["AI","ML","DM","DL"]
+    for speciality in specialities :
+        b = Speciality.objects.create(name= speciality, parent_id = 1)
+
+    return render(request, 'data.html')
+
+@login_required(login_url='/login/')
+def submit(request):
+    form= SubmitForm()
+    if request.method == 'POST':
+        print("1")
+        form = SubmitForm(request.POST, request.FILES, instance = Submit.objects.get(user_sub = request.user))
+        if form.is_valid():
+            print("2")
+            form.save()
+            return HttpResponseRedirect('/login/account/')
+
+    return render(request, 'account/submit.html', {'form':form})
+
+def contact(request):
+    return render(request, 'contact.html', {})
+
+def program(request):
+    return render(request, 'program.html', {})

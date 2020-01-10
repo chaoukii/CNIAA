@@ -1,0 +1,119 @@
+
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	box-sizing: border-box;
+	font-family: lorum ipsum;
+}
+
+body
+{
+	min-height: 100vh;	
+}
+
+
+/*  Start LOGIN FORM modification */ 
+.login-form
+{
+}
+
+
+.login-form h3
+{
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+/*  End of LOGIN FORM modification */
+
+/*  Start text box modification */  
+.text-box
+{
+	font-size: 20px;
+	border-bottom: 2px solid grey;
+	position: relative;
+	margin: 30px 0 ; 
+}
+
+.text-box input
+{
+	color: black;
+	font-size: 18px;
+	border: none;
+	width: 90%;
+	height: 40px;
+	background: none;
+	padding: 0 5px;
+	outline: none;
+}
+
+.text-box span::before
+{
+	content: attr(data-placeholder);
+	position: absolute;
+	top: 50%;
+	left: 5px;
+	color: red;
+	transform: translateY(-50%);
+	z-index: -1;
+	transition: .4s;
+	font-size: 18px;
+}
+
+.text-box span::after
+{
+		color: red;
+	content: '';
+	position: absolute;
+	width: 0px;
+	height: 2px;
+  	background-image:  linear-gradient(120deg,blue,#0facf3);
+  	top:40px;
+  	left: 0px;
+    transition: .5s; 
+    
+}
+
+/*  end text box modification */  
+
+
+.focus + span::before
+{
+	top:-5px;
+	font-size: 15px;
+}
+
+.focus + span::after
+{
+	width: 100%;
+}
+
+/* start button modification */ 
+
+.btn
+{	
+	width: 120px;
+	height: 50px;
+	font-size: 20px;
+	padding: 10px 15px ;
+	justify-content: center;
+	align-items: center;
+	margin-top: 22%;
+	margin-left:25%; 
+}
+
+.btn:hover
+{
+	 opacity: 0.8;
+}
+
+/* end button modification */ 
+
+.sign-text
+{
+	margin-top: 30px;
+	text-align:center;
+	font-size: 16px;
+}
+

@@ -1,7 +1,8 @@
 from django import forms
 
-from workshop.models import Comment
+from workshop.models import Comment, Submit, Speciality
 from django.contrib.auth.models import User
+from .fields import GroupedModelChoiceField
 
 class CommentForm(forms.ModelForm):
     class Meta:
@@ -15,3 +16,13 @@ class UserForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ("username", "password", "email")
+
+
+class SubmitForm(forms.ModelForm):
+    speciality = GroupedModelChoiceField(
+        queryset=Speciality.objects.exclude(parent=None),
+        choices_groupby='parent'
+    )
+    class Meta:
+        model = Submit
+        fields = ('full_name','phone','speciality','article')
