@@ -41,7 +41,12 @@ def log(request):
 
 @login_required(login_url='/login/')
 def account_home(request):
-    return render(request, 'account/home.html', {})
+    try:
+        accepted = Submit.objects.get(user_sub = request.user).accepted
+    except :
+        accepted = None
+
+    return render(request, 'account/home.html', {"accepted":accepted})
 
 def data(request):
     specialities = ["AI","ML","DM","DL"]
@@ -54,10 +59,8 @@ def data(request):
 def submit(request):
     form= SubmitForm()
     if request.method == 'POST':
-        print("1")
         form = SubmitForm(request.POST, request.FILES, instance = Submit.objects.get(user_sub = request.user))
         if form.is_valid():
-            print("2")
             form.save()
             return HttpResponseRedirect('/login/account/')
 

@@ -5,10 +5,10 @@
 <html>
     <head>
 
-        <title>	page js </title>
+        <title>Home </title>
 
         <meta charset="utf-8" />
-        <meta name="viewprot" cont="width=device-width , initial-scal=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
         <link href="https://fonts.googleapis.com/css?family=Courier+Prime&display=swap" rel="stylesheet">
@@ -39,7 +39,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index2.html">TECH DAY</a>
+                    <a class="navbar-brand" href="{% url 'home' %}">TECH DAY</a>
                 </div>
 
                 <div class="collapse navbar-collapse " id="coll">
