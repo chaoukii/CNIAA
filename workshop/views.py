@@ -8,7 +8,6 @@ from workshop.forms import CommentForm, UserForm, SubmitForm
 from django.contrib.auth.models import User
 from .models import Submit
 
-
 # Create your views here.
 def home(request):
     user_form = CommentForm(request.POST)
@@ -42,9 +41,11 @@ def log(request):
 @login_required(login_url='/login/')
 def account_home(request):
     try:
-        accepted = Submit.objects.get(user_sub = request.user).accepted
+        accepted = Submit.objects.get(sub = request.user).accepted
+        print(accepted)
     except :
         accepted = None
+
 
     return render(request, 'account/home.html', {"accepted":accepted})
 
@@ -59,9 +60,11 @@ def data(request):
 def submit(request):
     form= SubmitForm()
     if request.method == 'POST':
-        form = SubmitForm(request.POST, request.FILES, instance = Submit.objects.get(user_sub = request.user))
+        form = SubmitForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            doc = form.save(commit=False)
+            doc.sub = request.user
+            doc.save()
             return HttpResponseRedirect('/login/account/')
 
     return render(request, 'account/submit.html', {'form':form})

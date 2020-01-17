@@ -21,13 +21,12 @@ class Comment(models.Model):
         return self.name
 
 class Submit(models.Model):
-    user_sub = models.OneToOneField(User, on_delete=models.CASCADE, related_name='user_sub')
+    sub = models.OneToOneField(User, on_delete=models.CASCADE, related_name='sub')
     full_name = models.CharField(max_length=500)
     phone_regex = RegexValidator(regex=r'^\+?1?\d{9,13}$', message="Phone number must be entered in the format: '+999999999'. Up to 13 digits allowed.")
     phone = models.CharField(validators=[phone_regex], max_length=15, blank=True)
     speciality = models.ForeignKey(Speciality, on_delete=models.CASCADE)
     article =  models.FileField(upload_to='media/', null=True, blank=False)
     accepted = models.BooleanField(default=False)
-
     def __str__(self):
         return self.full_name

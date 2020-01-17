@@ -12,7 +12,7 @@
       <h1>Wellcome {{ user.username }}</h1>
         <div class="pere">
             <div class="box">
-                <form method="post" class="form">
+                <form method="POST" class="form" enctype="multipart/form-data">
                   {% csrf_token %}
                   {% bootstrap_form form %}
                     <button type="submit" class="btn btn-pink pull-right">Sign In</button>

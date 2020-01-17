@@ -1,0 +1,41 @@
+left1 = []
+right1 = []
+left2 = []
+right2 = []
+result = []
+
+def read():
+    global right1
+    global right2
+    x = input("enter the rule 1 :")
+    right1.append(x.split("->")[0])
+    right1 = right1[0]
+    left1.append(x.split("->")[1].split("/"))
+    x = input("enter the rule 2 :")
+    right2.append(x.split("->")[0])
+    right2 = right2[0]
+    left2.append(x.split("->")[1].split("/"))
+    
+read()
+
+if not(right1.isupper() and right1.isalpha() or right2.isupper() and right2.isalpha()) :
+    print("--- Error plz try again ---")
+    read()
+
+def get():    
+    for char in left1[0] :
+        if char[0].islower():
+            result.append(char[0])
+        elif char[0] == right2 :
+            for char in left2[0] :
+                if char[0].islower():
+                    result.append(char[0])
+
+get()                            
+result.append('#')
+print(result)
+
+
+
+
+

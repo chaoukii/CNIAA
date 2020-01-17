@@ -11,18 +11,19 @@
     </head>
     <body>
       <h1>Wellcome {{ user.username }}</h1>
+      <a href="{% url 'logout' %}">Log out</a>
       {% if accepted %}
         <h2>You have been accepted ! please contact us for more information.</h2>
-
+      {% endif %}
         <div class="pere">
             <div class="box">
 
                 <br>
-                  <a href="{% url 'logout' %}">Log out</a>
+
                   <br>
-                  {% else %}
+
                   <a href="{% url 'submit' %}">Submit</a>
-                  {% endif %}
+
             </div>
         </div>
 

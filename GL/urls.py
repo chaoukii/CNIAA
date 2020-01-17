@@ -8,7 +8,6 @@ from django.conf import settings
 
 urlpatterns = [
     path('data/', views.data, name='data'),
-    path('contact/', views.contact, name='contact'),
     path('program/', views.program, name='program'),
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
