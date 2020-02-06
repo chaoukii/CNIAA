@@ -1,5 +1,5 @@
 from django import forms
-
+from django.forms import TextInput
 from workshop.models import Comment, Submit, Speciality
 from django.contrib.auth.models import User
 from .fields import GroupedModelChoiceField
@@ -16,6 +16,10 @@ class UserForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ("username", "password", "email")
+        help_texts = {
+            'username': None,
+            'email': None,
+        }
 
 
 class SubmitForm(forms.ModelForm):

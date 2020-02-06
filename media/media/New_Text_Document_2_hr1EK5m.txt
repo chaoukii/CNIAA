@@ -1,0 +1,8 @@
+cd Desktop
+python -m venv GL/project
+cd GL\project\Scripts
+activate 
+ro7i lel fichier li fih le site(GL)
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver

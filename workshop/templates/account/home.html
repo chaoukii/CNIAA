@@ -1,33 +1,230 @@
+<!DOCTYPE html>
 {% load staticfiles %}
 {% load bootstrap4 %}
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>login</title>
-        <link rel="stylesheet" href="{% static 'Lstyle.css' %}">
-        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CNIAA</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
 
-    </head>
-    <body>
-      <h1>Wellcome {{ user.username }}</h1>
-      <a href="{% url 'logout' %}">Log out</a>
-      {% if accepted %}
-        <h2>You have been accepted ! please contact us for more information.</h2>
-      {% endif %}
-        <div class="pere">
-            <div class="box">
 
-                <br>
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
 
-                  <br>
+  <!-- bootstrap -->
+  <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
-                  <a href="{% url 'submit' %}">Submit</a>
+  <!-- Libraries   -->
+  <link href="{% static 'lib/fontawesome-free-5.12.0-web/css/all.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/ionicons/css/ionicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
 
-            </div>
+
+
+   <!-- My css -->
+  <link href="{% static 'css/stylehome.css' %}" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <!--  Start header -->
+    <header id="header">
+      <div class="container">
+        <div class="logo float-left">
+        <h4>  <a href="#header" class=""> CNIAA </a> </h4>
+        </div>
+        <!-- Start navbar -->
+        <nav class="main-nav float-right d-none d-lg-block">
+          <ul>
+            <li class="active"><a href="{% url 'logout' %}">Log out</a></li>
+            {% if notexist %}
+            <li><a href="{% url 'submit' %}">Submit</a></li>
+            {% endif %}
+            <li><a href="{% url 'people' %}">committee</a></li>
+
+          </ul>
+        </nav>
+        <!-- End navbar  -->
+      </div>
+    </header>
+  <!--  End header -->
+
+  <!--==========================   Start  First  Section    ============================-->
+
+  <section id="intro" class="clearfix">
+    <div class="container d-flex h-100">
+      <div class="row justify-content-center align-self-center">
+        <div class="col-md-6 intro-info order-md-first order-last">
+          <h3 class="introh3">National Conference on Artificial Intelligence</h3>
+
+          <div class="divplus">
+            From October 18 to 20, 2020.<br>
+            University of Tiaret, <br> Faculty of Mathematics and Computer Science, <br> Department of Computer Science, Tiaret.
+          </div>
         </div>
 
+        <div class="col-md-6 intro-img order-md-last order-first">
+          <img src="{% static 'img/6.png' %}"  class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--==========================   End  First  Section    ============================-->
+
+  <!--==========================   Start  Introduction   Section    ============================-->
+
+   <div class="section-bg d-none d-md-block">
+    <div class="infoBar" id="programsss">
+      <div class="container-fluid ">
+        <p class="paragraphInfo">
+          The CNIAA is a forum to present new advances and research results in the field of artificial intelligence. <br>
+           The conference will bring together different researchers, engineers and scientists in the field of interest across the national territory. <br>
+           The conference covers all theoretical and practical aspects of artificial intelligence. <br>
+           Authors are invited to contribute to the conference by submitting articles that illustrate research results, projects, surveying and industrial experiences that describe significant advances in the selected themes of the conference.        </p>
+      </div>
+    </div>
+  </div>
+
+  <!--==========================   End  Introduction   Section    ============================-->
+
+  <!--==========================   Start  main   Section    ============================-->
+
+  <main id="main">
+    <section id="program" class="section-bg">
+      <div class="container">
+        <header class="section-header">
+          <h3>Our Program</h3>
+          <p></p>
+        </header>
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
+            <div class="box">
+               <h4 class="title">Firstly</h4>
+              <p class="description  ">Tools and applications of artificial intelligence. <br> </p>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
+            <div class="box">
+               <h4 class="title">Secondly</h4>
+              <p class="description ">Artificial intelligence algorithms. </p>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
+            <div class="box">
+               <h4 class="title">Thirdly</h4>
+               <p class="description ">Natural language processing. </p>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
+            <div class="box">
+               <h4 class="title">Forthly</h4>
+               <p class="description ">Image and vision processing. </p>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
+            <div class="box">
+               <h4 class="title">Fivethly</h4>
+               <p class="description ">Web intelligence application and research.</p>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
+            <div class="box">
+               <h4 class="title">Sixthly</h4>
+               <p class="description ">Intelligent systems architectures.</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
-    </body>
+    </section>
+
+
+
+  <!--==========================   Start  About Us Section    ============================-->
+
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-10">
+            <div class="about-content">
+              <h2>About Us</h2>
+              <p>
+                  we are community of professors algerians trying to help our society in the new technology and the new world evolution
+                  we are community of professors algerians trying to help our society in the new technology and the new world evolution
+                  we are community of professors algerians trying to help our society in the new technology and the new world evolution
+                  we are community of professors algerians trying to help our society in the new technology and the new world evolution
+                  we are community of professors algerians trying to help our society in the new technology and the new world evolution
+                  we are community of professors algerians trying to help our society in the new technology and the new world evolution
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+   <!--==========================   End  main Section    ============================-->
+
+     <!--==========================  Start  Contact Us   ============================-->
+
+  <section id="footer">
+    <footer id="footer" class="section-bg">
+      <div class="footer-top">
+        <div class="container">
+        <div class="row">
+
+            <div class="col-lg-6 col-md-12">
+              <h4 class="text-center">Directions</h4>
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.729639869554!2d3.1717269156421697!3d36.70503418074978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128e522f3f317461%3A0x215c157a5406653c!2sEcole%20Nationale%20Sup%C3%A9rieure%20d&#39;Informatique%20(Higher%20School%20for%20Computer%20Science)!5e0!3m2!1sen!2sdz!4v1578677523387!5m2!1sen!2sdz" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            </div>
+
+
+
+    </footer>
+
+  </section>
+</div>
+
+  <!--   Start Contact Us -->
+    <div class=" container social">
+      <div style="font-size : 20px"> Follow Us </div>
+      <a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+      <a href="#"><i class="fab fa-twitter"    aria-hidden="true"></i></a>
+      <a href="#"><i class="fab fa-instagram"  aria-hidden="true"></i></a>
+      <a href="#"><i class="fab fa-github"     aria-hidden="true"></i></a>
+      <a href="#"><i class="fab fa-linkedin"   aria-hidden="true"></i></a>
+    </div>
+  <!--   End  Contact Us -->
+
+  <a href="#" class="back-to-top "><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JS Libraries -->
+  <script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'lib/jquery/jquery-migrate.min.js' %}"></script>
+  <script src="{% static 'lib/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+  <script src="{% static 'lib/mobile-nav/mobile-nav.js' %}"></script>
+  <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+  <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+  <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+  <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'lib/isotope/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
+
+  <script src="https://www.taurineintl.com/contactform/contactform.js"></script>
+
+
+   <!-- My Js  -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
 </html>
