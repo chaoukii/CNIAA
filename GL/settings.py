@@ -133,21 +133,6 @@ USE_TZ = True
 LOGIN_REDIRECT_URL = 'account/'
 LOGOUT_REDIRECT_URL = '/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
-
-
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.1/howto/static-files/
-
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
-
 import dj_database_url
 db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
@@ -160,14 +145,14 @@ ALLOWED_HOSTS = ['*']
 SITE_ID = 1
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-STATIC_URL = '/static/'
+
 TEMPLATE_DIRS=(
 os.path.join(os.path.dirname(BASE_DIR),"static","templates"),
 )
 if DEBUG:
   MEDIA_URL='/media/'
   STATIC_ROOT=os.path.join(os.path.dirname(BASE_DIR),"static","static-only")
-  MEDIA_ROOT=os.path.join(os.path.dirname(BASE_DIR),"static","media")
+  MEDIA_ROOT=os.path.join(os.path.dirname(BASE_DIR),"staticfiles","media")
   STATICFILE_DIRS=(
   os.path.join(os.path.dirname(BASE_DIR),"static","static"),
   )
