@@ -133,6 +133,8 @@ USE_TZ = True
 LOGIN_REDIRECT_URL = 'account/'
 LOGOUT_REDIRECT_URL = '/'
 
+STATIC_URL = 'staticfiles/'
+
 import dj_database_url
 db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
