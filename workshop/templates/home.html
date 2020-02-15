@@ -43,10 +43,10 @@
         <nav class="main-nav float-right d-none d-lg-block">
           <ul>
             <li class="active"><a href="#intro">Home</a></li>
-            <li><a href="#program">Program</a></li>
+            <li><a href="{% url 'people' %}">committee</a></li>
+            <li><a href="#program">Topics</a></li>
             <li><a href="#about">About Us</a></li>
             <li><a href="#footer">Contact Us</a></li>
-            <li><a href="{% url 'people' %}">committee</a></li>
             <li><a href="{% url 'login' %}">Sign in</a></li>
           </ul>
         </nav>
@@ -77,21 +77,18 @@
   </section>
   <!--==========================   End  First  Section    ============================-->
 
-  <!--==========================   Start  Introduction   Section    ============================-->
-
-   <div class="section-bg d-none d-md-block">
+  <div class="section-bg d-none d-md-block">
     <div class="infoBar" id="programsss">
       <div class="container-fluid ">
         <p class="paragraphInfo">
           The CNIAA is a forum to present new advances and research results in the field of artificial intelligence. <br>
-           The conference will bring together different researchers, engineers and scientists in the field of interest across the national territory. <br>
-           The conference covers all theoretical and practical aspects of artificial intelligence. <br>
-           Authors are invited to contribute to the conference by submitting articles that illustrate research results, projects, surveying and industrial experiences that describe significant advances in the selected themes of the conference.        </p>
+          The conference will bring together different researchers, engineers and scientists in the field of interest across the national territory. <br>
+          The conference covers all theoretical and practical aspects of artificial intelligence. <br>
+          Authors are invited to contribute to the conference by submitting articles that illustrate research results, projects, surveying and industrial experiences that describe significant advances in the selected themes of the conference.
+        </p>
       </div>
     </div>
   </div>
-
-  <!--==========================   End  Introduction   Section    ============================-->
 
   <!--==========================   Start  main   Section    ============================-->
 
@@ -99,43 +96,43 @@
     <section id="program" class="section-bg">
       <div class="container">
         <header class="section-header">
-          <h3>Our Program</h3>
+          <h3>Topics</h3>
           <p></p>
         </header>
         <div class="row">
           <div class="col-sm-12 col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
             <div class="box">
-               <h4 class="title">Firstly</h4>
+
               <p class="description  ">Tools and applications of artificial intelligence. <br> </p>
             </div>
           </div>
           <div class="col-sm-12 col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
             <div class="box">
-               <h4 class="title">Secondly</h4>
+
               <p class="description ">Artificial intelligence algorithms. </p>
             </div>
           </div>
           <div class="col-sm-12 col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
             <div class="box">
-               <h4 class="title">Thirdly</h4>
+
                <p class="description ">Natural language processing. </p>
             </div>
           </div>
           <div class="col-sm-12 col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
             <div class="box">
-               <h4 class="title">Forthly</h4>
+
                <p class="description ">Image and vision processing. </p>
             </div>
           </div>
           <div class="col-sm-12 col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
             <div class="box">
-               <h4 class="title">Fivethly</h4>
+
                <p class="description ">Web intelligence application and research.</p>
             </div>
           </div>
           <div class="col-sm-12 col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
             <div class="box">
-               <h4 class="title">Sixthly</h4>
+
                <p class="description ">Intelligent systems architectures.</p>
             </div>
           </div>
@@ -190,17 +187,20 @@
                   {% csrf_token %}
                   {% bootstrap_form form %}
                     </div>
-                    <div id="sendmessage">Your message has been sent. Thank you!</div>
-              <!--      <div id="errormessage">There was a problem sending a message. Pls send it directly to hari@taurineintl.com</div>  -->
                   <div class="text-center"><button type="submit" title="Send Message">Send Message</button></div>
                 </form>
               </div>
             </div>
 
 
-            <div class="col-lg-6 col-md-12">
+            <!--//////////// ///////// //// /////// //////// ////////////// ///////////// ////////// /////////////// ///////////////////////-->
+            <div class="col-lg-6 col-md-12" style=" align-items: center;">
               <h4 class="text-center">Directions</h4>
-               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.729639869554!2d3.1717269156421697!3d36.70503418074978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128e522f3f317461%3A0x215c157a5406653c!2sEcole%20Nationale%20Sup%C3%A9rieure%20d&#39;Informatique%20(Higher%20School%20for%20Computer%20Science)!5e0!3m2!1sen!2sdz!4v1578677523387!5m2!1sen!2sdz" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
+              <iframe class="d-none d-md-block" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7739.723385887023!2d1.2994689959941443!3d35.35185343832281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1286d1bb290a915d%3A0x6880502250865fe2!2sUniversity%20Ibn%20Khaldoun!5e0!3m2!1sen!2sdz!4v1580837842531!5m2!1sen!2sdz" width="500" height="360" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
+              <iframe class="d-block d-md-none" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7739.723385887023!2d1.2994689959941443!3d35.35185343832281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1286d1bb290a915d%3A0x6880502250865fe2!2sUniversity%20Ibn%20Khaldoun!5e0!3m2!1sen!2sdz!4v1580837842531!5m2!1sen!2sdz" width="400" height="250" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
             </div>
 
 

@@ -1,10 +1,11 @@
+*{
+	font-family: "Open Sans", sans-serif;
+}
 body{
 	background: #f5f8fd; 
-	padding: 20px;
-
+	padding: 20px; 
 }
-
-
+ 
 .notthis{
  padding: 20px;
 }
@@ -22,11 +23,13 @@ body{
 }
 
 .uk-icon-button{
-	background: rgba(0, 0, 0, 0.685);
+
+ 	background:#1f87f0;
 }
 .uk-icon-button:hover{
-	background: rgba(0, 0, 0, 0.685);
-				opacity: 0.8;
+	background:#1f87f0;
+
+	opacity: 0.8;
 }
 
 

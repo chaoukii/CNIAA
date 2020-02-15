@@ -1,5 +1,7 @@
 
-  
+* {
+  font-family: "Open Sans", sans-serif;
+}
 body {
   background: #fff;
   color: #444;
@@ -54,7 +56,7 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 12px;
   color: #fff;
 }
- 
+
 /*--------------------------------------------------------------
 # Top Bar
 --------------------------------------------------------------*/
@@ -64,7 +66,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 14px;
   transition: all 0.5s;
 }
- 
+
 
 /*--------------------------------------------------------------
 # Header
@@ -107,7 +109,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   color: red;
 }
-  
+
 .main-pages {
   margin-top: 60px;
 }
@@ -139,7 +141,7 @@ h1, h2, h3, h4, h5, h6 {
 .introh3{
   color: #1bb1dc;
 }
-   
+
 
 
 /*--------------------------------------------------------------
@@ -291,7 +293,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/*            end mobile           */ 
+/*            end mobile           */
 /*--------------------------------------------------------------
 # Sections
 --------------------------------------------------------------*/
@@ -328,7 +330,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------*/
 
 
-/*   start about   */  
+/*   start about   */
 #about {
   padding: 80px 0;
 }
@@ -364,17 +366,17 @@ h1, h2, h3, h4, h5, h6 {
   padding-right: 4px;
   color: #1bb1dc;
 }
- 
-/*    end about    */ 
+
+/*    end about    */
 
 /* Services Section
 --------------------------------*/
 
-/*  start program   */ 
+/*  start program   */
 #program {
   padding: 60px 0 40px 0;
 }
- 
+
 #programsss {
   padding: 60px 0 40px 0;
 }
@@ -392,35 +394,37 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
   transition: all 0.3s ease-in-out;
   text-align: center;
-  
+  padding-top: 50px;
+
+
 }
 
 #program .box:hover {
   -webkit-transform: scale(1.1);
   transform: scale(1.15);
    background: url("../img/2.png");
- } 
+ }
 
 #program .title {
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 18px;
   color: #111;
-} 
+}
 
 #program .description {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 28px;
   margin-bottom: 0;
   text-align: left;
   text-align: center;
 }
-   
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 
-/* start footer */ 
+/* start footer */
 #footer {
   padding: 0 0 30px 0;
   font-size: 14px;
@@ -431,7 +435,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 60px 0 20px 0;
   background: #f5f8fd;
 }
- 
+
 
 #footer .footer-top h2 {
   font-size: 14px;
@@ -441,7 +445,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   padding-bottom: 10px;
 }
- 
+
 #footer .footer-top .footer-contact {
   margin-bottom: 30px;
 }
@@ -449,7 +453,7 @@ h1, h2, h3, h4, h5, h6 {
 #footer .footer-top .footer-contact p {
   line-height: 26px;
 }
- 
+
 #footer .footer-top .form .form-group {
   margin-bottom: 15px;
 }
@@ -542,35 +546,35 @@ h1, h2, h3, h4, h5, h6 {
 
   font-size: 22px;
   color: inherit;
-  
+
   }
-  
-    
+
+
   .programform{
     background: #e6fdfc;
   }
-  
-  
-  /* info bar  what we are gonna learn */ 
+
+
+  /* info bar  what we are gonna learn */
   .infoBar{
     font-family: Courier Prime;
     font-size: 23px;
-    margin: 0 60px 0px 60px;  
-    
-     
+    margin: 0 60px 0px 60px;
+
+
    /* background: rgba(0, 221, 255, 0.103);
   */
-    
-     
+
+
     background: rgba(166, 192, 196, 0.103);
-  
-  
-  
+
+
+
     border-radius: 270px 30px 270px;
-  
+
    }
   .paragraphInfo{
-   
+
     padding: 50px 200px;
      border-radius: 30px 60px 60px;
     display: inline-block;
@@ -591,14 +595,14 @@ h1, h2, h3, h4, h5, h6 {
        border-radius: 30px 60px 60px;
       display: inline-block;
     }
-  
+
 }
-  
-  
 
 
- /* end footer  */ 
- 
+
+
+ /* end footer  */
+
 /*--------------------------------------------------------------
 # Responsive Media Queries
 --------------------------------------------------------------*/
@@ -640,9 +644,9 @@ h1, h2, h3, h4, h5, h6 {
     padding: 15px 0;
   }
 
-   
+
 }
- 
+
 
 @media (max-width: 767px) {
   #intro {
@@ -672,23 +676,21 @@ h1, h2, h3, h4, h5, h6 {
   .section-header p {
     width: 100%;
   }
- 
+
 }
-  
+
 
 /**********  follow us social media  *************/
 .social{
-   text-align: center; 
-   margin-top: 0; 
+   text-align: center;
+   margin-top: 0;
 }
 .fab{
   font-size: 30px;
   color: rgb(2, 3, 54);
-  padding: 15px; 
+  padding: 15px;
   padding-top: 20px;
 }
  .fab:hover{
   opacity: 0.8;
 }
-
-
